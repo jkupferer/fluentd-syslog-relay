@@ -8,6 +8,7 @@ RUN yum install -y --enablerepo=rhel-7-server-optional-rpms \
       ruby-devel && \
     yum clean all && \
     fluent-gem install serverengine -v 1.6.4 && \
+    fluent-gem install syslog_protocol && \
     fluent-gem install fluent-mixin-config-placeholders -v 0.4.0 --minimal-deps && \
     cd /tmp && \
     curl -Lo fluent-plugin-remote-syslog-master.tar.gz \
