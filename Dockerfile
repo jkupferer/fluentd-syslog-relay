@@ -8,6 +8,7 @@ RUN cd /tmp && \
     curl -Lo fluent-plugin-remote-syslog-master.tar.gz \
       https://github.com/docebo/fluent-plugin-remote-syslog/archive/master.tar.gz && \
     tar -zxf fluent-plugin-remote-syslog-master.tar.gz && \
-    cp fluent-plugin-remote-syslog-master/lib/fluentd/plugin/* /etc/fluent/plugin/
+    cp fluent-plugin-remote-syslog-master/lib/fluentd/plugin/* /etc/fluent/plugin/ && \
+    rm -rf fluent-plugin-remote-syslog-master*
  
 ADD run.sh ${HOME}/
