@@ -4,7 +4,7 @@ MAINTAINER Johnathan Kupferer <jkupfere@redhat.com>
 
 # Download and deploy fluentd remote syslog plugin. No releases are provided
 # for this plugin on gitlab, so need to pull from master.
-RUN yum install -y  --enable-repo=rhel-7-server-optional-rpms \
+RUN yum install -y --enablerepo=rhel-7-server-optional-rpms \
       ruby-devel && \
     yum clean all && \
     fluent-gem install fluent-mixin-config-placeholders && \
